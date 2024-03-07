@@ -41,7 +41,7 @@
 }
 
 .large-div {
-  background-image: url("/styles/large.jpg");
+  background-image: url("large.jpg");
   background-position: center;
   height: 500px;
   background-size: cover;
