@@ -69,6 +69,13 @@ a {
   font-weight: 700;
 }
 
+.carousel-item {
+  transition: transform 5s ease-in-out;
+}
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 5s;
+}
 .general {
   font-size: 30px;
   font-weight: 800;

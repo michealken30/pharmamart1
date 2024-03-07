@@ -1,0 +1,30 @@
+.heading-bg {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 550px;
+}
+
+.check1 {
+}
+
+.check2 {
+  background-color: blue;
+}
+
+.flex-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-check a {
+  color: blue;
+}
