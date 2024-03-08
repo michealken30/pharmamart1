@@ -1,7 +1,7 @@
 .heading-bg {
   height: 100px;
   width: 100%;
-  background-color: red;
+  background-color: rgb(226, 159, 159);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,21 +12,43 @@
   grid-template-columns: 1fr 550px;
 }
 
-.check1 {
-}
-
 .check2 {
   background-color: rgb(221, 212, 212);
+  position: sticky;
+  top: 110px;
+  width: 550px;
+
+  height: 540px;
 }
 
 .flex-check {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid rgb(196, 193, 193);
+
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.your-order {
+  margin-left: 30px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.dev-label {
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .flex-check a {
-  color: blue;
+  color: rgb(14, 139, 14);
+  cursor: pointer;
+}
+
+.flex-check a:hover {
+  text-decoration: underline;
 }
 
 .flex-check-display {
@@ -108,4 +130,79 @@
 .check-bold {
   font-weight: 600;
   font-size: 20px;
+}
+
+.group-top {
+  margin-top: 40px;
+}
+
+.pass-check {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.check3 {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.check10 {
+  margin-top: 20px;
+}
+
+#inputState {
+  height: 60px;
+}
+
+.check-select1 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.check-select5 {
+  padding-bottom: 20px;
+  color: rgb(133, 127, 127);
+}
+
+.ft-size {
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.flex-check5 {
+}
+
+.opt-check {
+  margin-top: 0;
+}
+
+.grid-option {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.delivery-option {
+  display: flex;
+}
+
+.delivery-options-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 10px;
+}
+.delivery-option-date {
+  color: rgb(3, 144, 3);
+}
+
+.check-input input {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.check-select {
+  padding-top: 28px;
+  padding-bottom: 28px;
 }

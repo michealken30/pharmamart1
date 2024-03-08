@@ -64,10 +64,12 @@
 
     <section>
       <div class="checkout-grid">
-        <div class="check1">
-          <form action="">
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+        <div class="check3">
+          <form action="" class="check-input">
+            <div class="form-group group-top">
+              <label for="exampleInputPassword1" class="pass-check"
+                >Contact</label
+              >
               <input
                 type="password"
                 class="form-control"
@@ -85,34 +87,32 @@
                 >Check me out</label
               >
             </div>
-            <label for="">Dilivery</label>
-            <select class="form-control form-control-lg">
-              <option>Large select</option>
-              <option value="">nice</option>
-            </select>
+            <label for="inputState" class="dev-label">Delivery</label>
+              <select id="inputCountry" class="form-control form-control-lg check-select">
+                <option value="" disabled selected>Country/Region...</option>
+                <option value="Nigeria">Nigeria</option>
+              </select>
+
             <form>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control check10"
                     id="inputEmail4"
                     placeholder="Email"
                   />
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Password</label>
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control check10"
                     id="inputPassword4"
                     placeholder="Password"
                   />
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAddress">Address</label>
                 <input
                   type="text"
                   class="form-control"
@@ -121,7 +121,6 @@
                 />
               </div>
               <div class="form-group">
-                <label for="inputAddress2">Address 2</label>
                 <input
                   type="text"
                   class="form-control"
@@ -131,19 +130,30 @@
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputCity">City</label>
-                  <input type="text" class="form-control" id="inputCity" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputCity"
+                    placeholder="City"
+                  />
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="inputState">State</label>
                   <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                    <option value="" disabled selected>State...</option>
+                    <option>Lagos</option>
+                    <option>Abuja</option>
+                    <option>Edo</option>
+                    <option>Rivers</option>
+                    <option>Enugu</option>
                   </select>
                 </div>
                 <div class="form-group col-md-2">
-                  <label for="inputZip">Zip</label>
-                  <input type="text" class="form-control" id="inputZip" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputZip"
+                    placeholder="Zip"
+                  />
                 </div>
               </div>
               <div class="form-group">
@@ -160,37 +170,91 @@
               </div>
             </form>
           </form>
-          <div>
-            <p>Dilivery Options</p>
+
+          <div class="alert alert-dark mb-0" role="alert">
+            All delivery options are within Lagos. For delivery outside Lagos
+            click on the contact info link below.Thanks for your understanding
           </div>
 
-          <div>
-            <p>Payment</p>
-            <span>All transactions are secure</span>
+          <div class="delivery-options">
+            <div class="delivery-options-title">Choose a delivery option:</div>
 
-            <div class="card border-secondary mb-3" style="max-width: 100%">
-              <div class="card-header">Header</div>
-              <div class="card-body text-secondary">
-                <h5 class="card-title">Secondary card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+            <div class="grid-option">
+              <div class="delivery-option">
+                <input
+                  type="radio"
+                  class="delivery-option-input"
+                  name="delivery-option-2"
+                />
+
+                <div>
+                  <div class="delivery-option-date">Tuesday, June 21</div>
+                  <div class="delivery-option-price">FREE Shipping</div>
+                </div>
+              </div>
+              <div class="delivery-option">
+                <input
+                  type="radio"
+                  checked
+                  class="delivery-option-input"
+                  name="delivery-option-2"
+                />
+                <div>
+                  <div class="delivery-option-date">Wednesday, June 15</div>
+                  <div class="delivery-option-price">$4.99 - Shipping</div>
+                </div>
+              </div>
+              <div class="delivery-option">
+                <input
+                  type="radio"
+                  class="delivery-option-input"
+                  name="delivery-option-2"
+                />
+                <div>
+                  <div class="delivery-option-date">Monday, June 13</div>
+                  <div class="delivery-option-price">$9.99 - Shipping</div>
+                </div>
               </div>
             </div>
-            <button type="button" class="btn btn-primary btn-lg btn-block">
-              Block level button
-            </button>
 
-            <div class="flex-check">
-              <a href="">Refund policy.</a>
-              <a href="">Refund policy.</a>
-              <a href="">Refund policy.</a>
-              <a href="">Refund policy.</a>
+            <div class="check-select4">
+              <p class="check-select1">Payment</p>
+              <span class="check-select5">All transactions are secure</span>
+
+              <div
+                class="card border-secondary mt-3 mb-4"
+                style="max-width: 100%"
+              >
+                <div class="card-header">Bank Transfer</div>
+                <div class="card-body text-secondary">
+                  <p class="card-text">
+                    Use the Instant Transfer option to transfer the order total
+                    amount due to: Name: Supermart (S.E.S.L) Wallet Credits
+                    Account Number: 0153912558 Bank: GTB Use your name or email
+                    as a reference and email us at service@supermart.ng with the
+                    transfer receipt
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-success btn-lg ft-size btn-block"
+              >
+                Complete Order
+              </button>
+
+              <div class="flex-check">
+                <a href="">Refund policy.</a>
+                <a href="">Privacy policy.</a>
+                <a href="">Terms of service</a>
+                <a href="">Contact information</a>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="check2">
+          <div class="your-order">Your Order</div>
           <div class="flex-check-display">
             <div class="check-img-1">
               <div class="card check-rel" style="width: 6rem">
@@ -252,6 +316,8 @@
           </div>
         </div>
       </div>
+      </div>
+      
     </section>
 
     <script
@@ -259,10 +325,18 @@
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var selectElement = document.getElementById("inputCountry");
+        selectElement.value = "Nigeria"; // Set the default value to Nigeria
+      });
+    </script>
   </body>
 </html>
