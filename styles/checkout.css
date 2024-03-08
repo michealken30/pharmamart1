@@ -16,7 +16,7 @@
 }
 
 .check2 {
-  background-color: blue;
+  background-color: rgb(221, 212, 212);
 }
 
 .flex-check {
@@ -27,4 +27,85 @@
 
 .flex-check a {
   color: blue;
+}
+
+.flex-check-display {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.check-img-wd {
+  width: 100%;
+  object-fit: contain;
+}
+
+.check-end1 {
+  margin-top: 30px;
+}
+
+.check-para3 {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.check-img-1 {
+  position: relative;
+}
+
+.check-abosolute {
+  position: absolute;
+  right: -6px;
+  top: -10px;
+  background-color: rgba(0, 0, 0, 0.56);
+  color: white;
+
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.check2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-style {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.coupoun-input {
+  padding: 19px;
+  border: none;
+  padding-right: 170px;
+  border-radius: 3px;
+}
+
+.coupon-btn {
+  padding: 13px 20px;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.check-total-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+.check-total2 {
+  text-align: right;
+}
+
+.reverse-text {
+  direction: rtl;
+}
+
+.check-bold {
+  font-weight: 600;
+  font-size: 20px;
 }
