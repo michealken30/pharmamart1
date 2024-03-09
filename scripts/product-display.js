@@ -26,9 +26,9 @@ function productDisplay(products, cart) {
           type="button"
           class="btn btn-outline-secondary btn1-tag"
         >
-          <a href="#" class="minus js-minus-quantity" data-quantity-id = "${product.id}">&#8722;</a>
+          <a href="#" class="minus js-minus-quantity" data-product-id = "${product.id}">&#8722;</a>
           <span class="one-span quantity-count-${product.id}">1</span>
-          <a href="#" class="js-add-quantity" data-quantity-id = "${product.id}">+</a>
+          <a href="#" class="js-add-quantity" data-product-id = "${product.id}">+</a>
         </button>
 
         <button
@@ -41,44 +41,59 @@ function productDisplay(products, cart) {
     </div>
   </div>
     
+    
   `;
   });
 
   document.querySelector(".js-grid-class3").innerHTML = productsHtml;
 
   document.querySelectorAll(".js-add-quantity").forEach((link) => {
-    link.addEventListener("click", () => {
-      console.log(link);
-      quantityId = link.dataset.quantityId;
-      console.log(quantityId);
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
 
-      html = document.querySelector(`.quantity-count-${quantityId}`).innerHTML;
-      console.log(html);
+      let productId = link.dataset.productId;
+      console.log(productId);
 
-      value = Number(html);
+      let element = document.querySelector(`.quantity-count-${productId}`);
+      console.log(element);
+      if (element) {
+        html = element.innerHTML;
+      } else {
+        console.log(
+          `Element with class 'quantity-count-${productId}' not found`
+        );
+      }
+
+      value = parseInt(html);
+
       value += 1;
-      console.log(value);
 
-      document.querySelector(`.quantity-count-${quantityId}`).innerHTML = value;
+      document.querySelector(`.quantity-count-${productId}`).innerHTML = value;
     });
   });
 
   document.querySelectorAll(".js-minus-quantity").forEach((link) => {
-    link.addEventListener("click", () => {
-      console.log(link);
-      quantityId = link.dataset.quantityId;
+    link.addEventListener("click", (event) => {
+      if (event.target.matches(".js-minus-quantity")) {
+        event.preventDefault();
 
-      html = document.querySelector(`.quantity-count-${quantityId}`).innerHTML;
-      console.log(html);
+        let link = event.target;
+        let productId = link.dataset.productId;
 
-      value = Number(html);
-      if (value === 1) {
-        value = 1;
-      } else {
-        value -= 1;
+        html = document.querySelector(`.quantity-count-${productId}`).innerHTML;
+        console.log(html);
+
+        value = parseInt(html);
+        console.log(value);
+        if (value > 1) {
+          value -= 1;
+
+          console.log(value);
+
+          document.querySelector(`.quantity-count-${productId}`).innerHTML =
+            value;
+        }
       }
-
-      document.querySelector(`.quantity-count-${quantityId}`).innerHTML = value;
     });
   });
 
@@ -96,6 +111,8 @@ function productDisplay(products, cart) {
 
       value = document.querySelector(`.quantity-count-${productId}`).innerHTML;
 
+      value = parseInt(value);
+
       if (matchingProduct) {
         matchingProduct.quantity += value;
       } else {
@@ -105,7 +122,19 @@ function productDisplay(products, cart) {
         });
       }
 
+      let cartQuantity = 0;
+
+      cart.forEach((item) => {
+        cartQuantity += parseInt(item.quantity);
+      });
+
+      console.log(cartQuantity);
+
+      document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
+
       console.log(cart);
     });
   });
+
+  renderCart();
 }

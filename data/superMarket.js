@@ -1,4 +1,4 @@
-const superMarketProducts = [
+export const superMarketProducts = [
   {
     id: "2Sure-Hand-Wash-Oatmilk-Honey-250-ml-Supermart-ng-2983_180x@2x",
     name: "",
