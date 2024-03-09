@@ -123,6 +123,13 @@
   text-align: right;
 }
 
+.anchor-block {
+  display: block;
+  color: rgb(212, 160, 160);
+  margin-top: 1px;
+  font-size: 14px;
+}
+
 .reverse-text {
   direction: rtl;
 }

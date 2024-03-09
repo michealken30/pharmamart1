@@ -27,6 +27,7 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles/checkout.css">
 
     <style>
       .modal-dialog {
@@ -52,6 +53,94 @@
         flex-direction: column;
         justify-content: space-between;
       }
+
+      .modal {
+        right: 0;
+        width: 25%;
+      }
+
+      .dis-2 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      .margin-para {
+        margin-top: 2px;
+        padding-left: 2px;
+        margin-right: 2px;
+        max-width: 200px;
+      }
+
+      .para7 {
+        margin-left: 2px;
+        width: 150px;
+        color: black;
+        font-weight: 600;
+      }
+
+      .check-img-1 {
+        margin-right: 2px;
+      }
+
+      .mode-amount {
+        margin-top: 2px;
+        color: black;
+        font-weight: 500;
+      }
+
+      .anchor-block {
+        display: block;
+        color: rgb(179, 169, 169);
+        margin-top: 25px;
+        font-size: 14px;
+      }
+
+      .instock7 {
+        color: rgb(177, 0, 168);
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 20px;
+      }
+
+      .sub-modal {
+        margin-top: 10px;
+      }
+
+      .sub-modal1 {
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .sub-modal1:hover {
+        text-decoration: underline;
+      }
+
+      .sub-modal2 {
+        font-weight: 600;
+      }
+
+      .sub-modal4 {
+       margin-bottom: 10px; 
+      }
+
+      
+      .btn-success {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+
+      .pdt-modal {
+        margin-top: 4px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-weight: 600;
+        color: rgb(170, 163, 163);
+      }
+
     </style>
   </head>
   <body>
@@ -75,53 +164,55 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
+          <div class="instock7">
+            <i class="fa-solid fa-check"></i>
+            <span>Item Added to cart</span>
+          </div>
           <div class="modal-header head-mode">
-            <h5 class="modal-title" id="exampleModalLabel">Shoping Cart</h5>
-            <p>Recently viewed</p>
             <div>
-              <span>Close</span>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                X
-              </button>
+              <h5 class="modal-title" id="exampleModalLabel">Your Order</h5>
+              <p class="sub-modal">Subtotal</p>
             </div>
+            <div class="mt-2">
+              <div class="sub-modal4"><a class="sub-modal1" style="color: black" >View Cart</a></div>
+              <span class="sub-modal2">#29000</span>
+            </div>
+            
+          </div>
+          <div class="mb-3 mx-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Add a note to your order</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+            
+          </div>
+          <button type="button" class="btn btn-success ">Checkout</button>
+
+          <div class="pdt-modal">
+            Products (2)
           </div>
           <div class="modal-body">
-            <div class="modal-div">
-              <div class="first-div">div1</div>
-              <div class="second-div">
-                <div><p>I love you</p></div>
-                <div>
-                  <button>love</button>
-                  <span>Amount</span>
+            <div class= "dis-2">
+              <div class="check-img-1">
+                <div class="card check-rel" style="width: 5rem">
+                  <img
+                    src="./images/beauty-products/Bio-Oil-60ml.jpeg"
+                    class="card-img-top check-img-wd"
+                    alt="..."
+                  />
+                  <span class="check-abosolute rounded-circle">1</span>
                 </div>
               </div>
-              <div class="third-div">
-                <button>X</button>
-                <span>Amount</span>
+              <div class="margin-para">
+                <p class="para7">this is a coconut which is good for you</p>
+              </div>
+              <div class="mode-amount">
+                <span class="">#1000</span>
+                <a class="anchor-block" href="">Remove</a>
               </div>
             </div>
-          </div>
-          <div class="total-bill">
-            <div>
-              <p>SUB TOTAL</p>
-              <p>Shipping</p>
-              <span>no need</span>
-            </div>
-            <div>
-              <p>Amont</p>
-              <span>one love</span>
-            </div>
-          </div>
+         
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -142,125 +233,5 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-
-    <div class="cart-dis-grid">
-      <div>
-        <div class="cust-items-column">
-          <div>One love</div>
-          <div class="cart-flex-num">
-            <p>this is me</p>
-            <span>1000</span>
-            <div>
-              <button>this</button>
-              <button>this</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cust-items-column">
-          <div>One love</div>
-          <div class="cart-flex-num">
-            <p>this is me</p>
-            <span>1000</span>
-            <div>
-              <button>this</button>
-              <button>this</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cust-items-column">
-          <div>One love</div>
-          <div class="cart-flex-num">
-            <p>this is me</p>
-            <span>1000</span>
-            <div>
-              <button>this</button>
-              <button>this</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cust-items-column">
-          <div>One love</div>
-          <div class="cart-flex-num">
-            <p>this is me</p>
-            <span>1000</span>
-            <div>
-              <button>this</button>
-              <button>this</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cust-items-column">
-          <div>One love</div>
-          <div class="cart-flex-num">
-            <p>this is me</p>
-            <span>1000</span>
-            <div>
-              <button>this</button>
-              <button>this</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   </body>
 </html>
-
-
-
-<div class="alert alert-light opt-check" role="alert">
-  <div class="delivery-options">
-    <div class="delivery-options-title">
-      Choose a delivery options:
-    </div>
-    
-    <div class="grid-option">
-    <div class="delivery-option">
-    
-      <input type="radio" class="delivery-option-input"
-        name="delivery-option-2">
-    
-      <div>
-        <div class="delivery-option-date">
-          Tuesday, June 21
-        </div>
-        <div class="delivery-option-price">
-          FREE Shipping
-        </div>
-
-    </div>
-  </div>
-    <div class="delivery-option">
-      <input type="radio" checked class="delivery-option-input"
-        name="delivery-option-2">
-      <div>
-        <div class="delivery-option-date">
-          Wednesday, June 15
-        </div>
-        <div class="delivery-option-price">
-          $4.99 - Shipping
-        </div>
-      </div>
-    </div>
-    <div class="delivery-option">
-      <input type="radio" class="delivery-option-input"
-        name="delivery-option-2">
-      <div>
-        <div class="delivery-option-date">
-          Monday, June 13
-        </div>
-        <div class="delivery-option-price">
-          $9.99 - Shipping
-        </div>
-      </div>
-    </div>
-  </div>
-  
