@@ -18,7 +18,7 @@ cart.forEach((cartItem) => {
 
   cartHtml += `
       
-      <div class="description-grid">
+      <div class="description-grid js-cart-item-${matchingProduct.id}">
               <div class="descript-1">
                 <img
                   class="img-cart-width"
@@ -73,5 +73,10 @@ document.querySelectorAll(".js-del-link").forEach((link) => {
     removeFromCart(productId);
 
     console.log(cart);
+
+    const container = document.querySelector(`.js-cart-item-${productId}`);
+
+    console.log(container);
+    container.remove();
   });
 });
