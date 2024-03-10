@@ -1,13 +1,13 @@
 export const superMarketProducts = [
   {
-    id: "2Sure-Hand-Wash-Oatmilk-Honey-250-ml-Supermart-ng-2983_180x@2x",
+    id: "washingsoap",
     name: "",
     image:
       "./images/supermarket-product/2Sure-Hand-Wash-Oatmilk-Honey-250-ml-Supermart-ng-2983_180x@2x.jpg",
     price: 1000,
   },
   {
-    id: "4th-Street-Sweet-Red-Wine-75-cl-Supermart-ng-2542_180x@2x",
+    id: "4thstreet12",
     name: "",
     image:
       "./images/supermarket-product/4th-Street-Sweet-Red-Wine-75-cl-Supermart-ng-2542_180x@2x.jpg",

@@ -1,4 +1,6 @@
-function productDisplay(products, cart) {
+import { cart, saveToStorage } from "./cart.js";
+
+export function productDisplay(products) {
   let productsHtml = "";
 
   products.forEach((product) => {
@@ -33,6 +35,8 @@ function productDisplay(products, cart) {
 
         <button
           type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
           class="btn btn-outline-secondary btn1-tag js-btn-cart" data-product-id = "${product.id}"
         >
           <span>ADD TO CART</span>
@@ -64,7 +68,7 @@ function productDisplay(products, cart) {
         );
       }
 
-      value = parseInt(html);
+      let value = parseInt(html);
 
       value += 1;
 
@@ -83,7 +87,7 @@ function productDisplay(products, cart) {
         html = document.querySelector(`.quantity-count-${productId}`).innerHTML;
         console.log(html);
 
-        value = parseInt(html);
+        let value = parseInt(html);
         console.log(value);
         if (value > 1) {
           value -= 1;
@@ -109,7 +113,9 @@ function productDisplay(products, cart) {
         }
       });
 
-      value = document.querySelector(`.quantity-count-${productId}`).innerHTML;
+      let value = document.querySelector(
+        `.quantity-count-${productId}`
+      ).innerHTML;
 
       value = parseInt(value);
 
@@ -121,6 +127,8 @@ function productDisplay(products, cart) {
           quantity: value,
         });
       }
+
+      saveToStorage();
 
       let cartQuantity = 0;
 
@@ -135,6 +143,4 @@ function productDisplay(products, cart) {
       console.log(cart);
     });
   });
-
-  renderCart();
 }

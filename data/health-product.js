@@ -20,14 +20,14 @@ export const healthProducts = [
     price: 1000,
   },
   {
-    id: "61Gwc2XBIQL._AC_SX679_1f2b5f09-d9b0-4bcb-b678-5a15cc50380b",
+    id: "61Gwc2XBIQL_AC_SX679_1f2b5f09-d9b0-4bcb-b678-5a15cc50380b",
     name: "",
     image:
       "./images/health-products/61Gwc2XBIQL._AC_SX679_1f2b5f09-d9b0-4bcb-b678-5a15cc50380b.jpg",
     price: 1000,
   },
   {
-    id: "71JpzaQCCML._AC_SX679_283511b4-a4c7-4d3d-910a-fe6cec13db24",
+    id: "71JpzaQCCML_AC_SX679_283511b4-a4c7-4d3d-910a-fe6cec13db24",
     name: "",
     image:
       "./images/health-products/71JpzaQCCML._AC_SX679_283511b4-a4c7-4d3d-910a-fe6cec13db24.jpg",

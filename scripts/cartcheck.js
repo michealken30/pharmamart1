@@ -4,12 +4,16 @@ import { healthProducts } from "../data/health-product.js";
 import { cart, removeFromCart } from "./cart.js";
 
 let cartHtml = "";
+console.log(cart);
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
   let matchingProduct;
 
-  healthProducts.forEach((product) => {
-    if (product.id === productId) {
+  console.log(cartItem.productId);
+
+  allProduct.forEach((product) => {
+    console.log(product.id);
+    if (product.id === cartItem.productId) {
       matchingProduct = product;
     }
   });
