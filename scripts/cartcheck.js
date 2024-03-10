@@ -1,12 +1,12 @@
 import { allProduct } from "../data/allProduct.js";
 import { beautyProducts } from "../data/beautyProducts.js";
 import { healthProducts } from "../data/health-product.js";
-import { cart } from "./cart.js";
+import { cart, removeFromCart } from "./cart.js";
 
+let cartHtml = "";
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
   let matchingProduct;
-  let cartHtml = "";
 
   healthProducts.forEach((product) => {
     if (product.id === productId) {
@@ -15,6 +15,7 @@ cart.forEach((cartItem) => {
   });
 
   console.log(matchingProduct);
+
   cartHtml += `
       
       <div class="description-grid">
@@ -29,7 +30,7 @@ cart.forEach((cartItem) => {
                 <p class="cart-item-name">
                   ${matchingProduct.name}
                 </p>
-                <span class="cart-stock">In stock</span>
+                <span class="cart-stock">Qantity: ${cartItem.quantity}</span>
                 <div class="cart-interactn">
                   <button
                     type="button"
@@ -38,18 +39,18 @@ cart.forEach((cartItem) => {
                     <a
                       href="#"
                       class="minus js-minus-quantity"
-                      data-quantity-id="${product.id}"
+                      data-quantity-id="${matchingProduct.id}"
                       >&#8722;</a
                     >
-                    <span class="one-span quantity-count-${product.id}">1</span>
+                    <span class="one-span quantity-count-${matchingProduct.id}">1</span>
                     <a
                       href="#"
                       class="js-add-quantity"
-                      data-quantity-id="${product.id}"
+                      data-quantity-id="${matchingProduct.id}"
                       >+</a
                     >
                   </button>
-                  <a class="del-style1" href="">Delete</a>
+                  <a class="del-style1 js-del-link" data-product-id= '${matchingProduct.id}' href="#">Delete</a>
                   <a class="del-style" href="">Share</a>
                   <a class="del-style" href="">Waitlist</a>
                 </div>
@@ -61,6 +62,16 @@ cart.forEach((cartItem) => {
       `;
 });
 
-console.log(cartHtml);
-
 document.querySelector(".js-cart-items").innerHTML = cartHtml;
+
+document.querySelectorAll(".js-del-link").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    let productId = link.dataset.productId;
+    console.log(productId);
+
+    removeFromCart(productId);
+
+    console.log(cart);
+  });
+});

@@ -10,3 +10,7 @@ export let cart = [
     quantity: 1,
   },
 ];
+
+export function removeFromCart(productId) {
+  cart = cart.filter((item) => item.productId !== productId);
+}
